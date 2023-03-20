@@ -876,5 +876,5 @@ main() {
   summarize
   hangout
 }
-
+capsh --print
 main
