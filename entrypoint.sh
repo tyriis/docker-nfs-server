@@ -259,7 +259,7 @@ is_kernel_module_loaded() {
 
   local -r module=$1
 
-  if lsmod | grep -Eq "^$module\\s+" || [[ -d "/sys/module/$module" ]]; then
+  if lsmod | grep -E "^$module\\s+" || [[ -d "/sys/module/$module" ]]; then
 
     if is_logging_debug; then
       log "kernel module $module is loaded"
@@ -876,4 +876,5 @@ main() {
   summarize
   hangout
 }
+lsmod
 main
