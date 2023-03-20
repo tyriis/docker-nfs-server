@@ -1,6 +1,6 @@
 FROM alpine:3.17.2
 
-RUN apk --update --no-cache add bash nfs-utils && \
+RUN apk --update --no-cache add bash nfs-utils libcap && \
                                                   \
     # remove the default config files
     rm -v /etc/idmapd.conf /etc/exports
