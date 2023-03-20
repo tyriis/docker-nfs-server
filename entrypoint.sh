@@ -273,7 +273,7 @@ is_kernel_module_loaded() {
 
 is_granted_linux_capability() {
 
-  if capsh --print | grep -Eq "Current: =\n.*,?${1}(,|$)"; then
+  if capsh --print | grep -E "${1}"; then
     return 0
   fi
 
@@ -876,5 +876,4 @@ main() {
   summarize
   hangout
 }
-capsh --print
 main
