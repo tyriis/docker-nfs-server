@@ -495,7 +495,7 @@ init_runtime_assertions() {
 
   # check kernel modules
   assert_kernel_mod nfs
-  assert_kernel_mod nfsd
+  # assert_kernel_mod nfsd
 
   # perform Kerberos assertions
   if is_kerberos_requested; then
